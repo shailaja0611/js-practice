@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    table tr{
+        cursor: pointer;transition: all.25s ease-in-out;
+    }
+    table tr:hover{background-color: dimgrey;}
+   </style>
+
+
+</head>
+<body>
+    first name:<input type="text"name="fname" id="fname"><br><br>
+    last name:<input type="text"name="fname" id="lname"><br><br>
+    age:<input type="text"name="age" id="age"><br><br>
+
+    <table id="table" border="1">
+       <tr>
+          <th>first name</th>
+          <th>last name</th>
+          <th>age</th>
+     </tr>
+      
+     <tr>
+          <td>FN1</td>
+          <td>LN1</td>
+          <td>10</td>
+        </tr>
+        <tr>
+            <td>FN1</td>
+            <td>LN1</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>FN1</td>
+            <td>LN1</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>FN1</td>
+            <td>LN1</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>FN1</td>
+            <td>LN1</td>
+            <td>34</td>
+          </tr>    
+
+    </table>
+<script>
+    
+    var table=document.getElementById("table"),rIndex;
+    for(var i=0;i<table.rows.length;i++)
+    {
+      table.rows[i].onclick=function()
+      {
+        rIndex=this .rowIndex;
+        console.log(rIndex);
+        document.getElementById("fname").value=this.cells[0].innerHTML;
+        document.getElementById("lname").value=this.cells[1].innerHTML;
+        document.getElementById("age").value=this.cells[2].innerHTML;
+
+
+      }
+
+
+    }
+
+
+
+</script>
+
+
+    
+</body>
+</html>
